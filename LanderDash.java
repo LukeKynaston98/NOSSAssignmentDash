@@ -53,6 +53,8 @@ public class LanderDash extends JFrame implements Runnable {
             int portno = 65250;
             DatagramSocket socket = new DatagramSocket(portno, addr);
             connection.setAddress((InetSocketAddress)socket.getLocalSocketAddress());
+			connection.addressname.setEditable(false);
+			connection.port.setEditable(false);
             while(fuel>=0) {
 
                 /* set up socket for reception */
