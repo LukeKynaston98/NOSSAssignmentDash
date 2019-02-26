@@ -18,7 +18,7 @@ all: tags $(jarfile)
 jarfile: $(jarfile)
 
 tags: $(sources)
-	ctags --extra=fq $(sources)
+	ctags  $(sources)
 
 $(jarfile): $(classes) $(assets)
 	jar cfe $@ $(main) $(classes) $(innerclasses) $(assets)
